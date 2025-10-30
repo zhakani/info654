@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My first html page</title>
+</head> 
+<body>
+    <p>Some input number</p>
+    <input id="randomnumber" type="number" ><br><br>
+    <button type="button" onclick="myFunction()">Enter</button>
+    <h2 id="demo"></h2>
+
+    <script>
+    function myFunction() {
+    let x=document.getElementById("randomnumber").value;
+    document.getElementById("demo").innerHTML = "You entered this value: " + x;
+    }
+    </script>
+</body> 
+</html>
