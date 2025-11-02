@@ -1,0 +1,118 @@
+h1,h2 {
+    font-family: "Snell Roundhand", cursive; 
+    font-weight: normal; 
+    line-height:0.1;
+}
+h2{
+    font-size: 1.8em;
+}
+body,h3,h4,h5,h6,p {
+    font-family: "Didot", serif; 
+    font-weight: normal; 
+    letter-spacing: 0.5px;
+}
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px 120px 20px;
+    border-spacing: 40px 10px;
+}
+a:link {
+    color: #354f52;
+}
+a:visited {
+    color: #233335;
+}
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #354f52;
+}
+#header ul li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#header ul li a:hover {
+    background-color: #233335;
+}
+#header {
+    width:100%; padding: 30px 100px 0px 100px; 
+    text-align: center; 
+    background: #354f52; 
+    color: white;
+    box-sizing: border-box; 
+}
+#footer {
+    width:100%; padding: 30px; 
+    text-align: center; 
+    background: #354f52; 
+    color: white;
+    box-sizing: border-box; 
+}
+#intro {
+    max-width: 100%;
+    height: 500px; 
+    background-image: url("./images/homepagebackground.jpg"); 
+    background-size: cover; 
+    background-position: center right; 
+    padding: 70px 100px;
+    box-sizing: border-box;
+}
+#sectionheader {
+    width:100%; padding: 60px 30px 10px 30px; 
+    text-align: center;
+    color: #354f52;
+    box-sizing: border-box; 
+}
+#sectiondivider {
+    width:100%; padding: 60px 30px 10px 30px; 
+    text-align: center;
+    color: #354f52;
+    box-sizing: border-box; 
+}
+#accent {
+    box-sizing: border-box; 
+    width:100%; 
+    padding: 50px 200px 80px 200px;
+    background-color: #bfcfbb;
+}
+.margin {
+    float: left;
+    width: 10%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.fourcolumn {
+    float: left;
+    width: 20%;
+    padding: 30px 30px 90px 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.twocolumn {
+    float: left;
+    width: 40%;
+    padding: 30px 30px 100px 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.colorgreen {
+    color:#354f52;
+}
+.image-class {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.image-class:hover {
+  opacity: 0.5;
+}
