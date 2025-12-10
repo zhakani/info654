@@ -204,6 +204,12 @@ a:visited {
     box-sizing: border-box;
     text-align: center;
 }
+.threecolumn img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 .twocolumn {
     float: left;
     text-align: center;
@@ -212,7 +218,7 @@ a:visited {
     padding: 0px 80px;
 }
 .twocolumn img {
-    width: 70%;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -237,11 +243,4 @@ a:visited {
 }
 .lightorange {
     color:#faa968;
-}
-.image-class {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-.image-class:hover {
-  opacity: 0.5;
 }
