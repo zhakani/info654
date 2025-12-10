@@ -1,0 +1,241 @@
+h1,h2,h3 {
+    font-family: "Impact", fantasy; 
+    font-weight: normal;
+}
+h1 {
+    line-height: 0.1;
+}
+body,h4,h5,h6,p {
+    font-family: "Gill Sans", sans-serif; 
+    font-weight: normal; 
+    letter-spacing: 0.5px;
+}
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px 120px 20px;
+    border-spacing: 40px 10px;
+}
+button {
+    background-color: #01204E;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover {
+    background-color: #028391;
+    transform: scale(1.05);
+}
+a:link {
+    color: #028391;
+}
+a:visited {
+    color: #14326f;
+}
+#header {
+    width:100%; 
+    padding: 50px 100px 20px 100px; 
+    text-align: center; 
+    background: #01204E; 
+    color: white;
+    box-sizing: border-box; 
+}
+#navigation {
+    background-color: #028391;
+}
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #028391;
+    justify-content: center;
+}
+#navigation ul li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#navigation ul li a:hover {
+    background-color: #01204E;
+}
+#welcome {
+    box-sizing: border-box;
+    width:100%;
+    padding: 50px 200px 80px 200px;
+    background-color: #f85525;
+    color: white;
+}
+#about {
+    box-sizing: border-box;
+    width:100%;
+    padding: 50px 200px 80px 200px;
+    background-color: #028391;
+    color: white;
+}
+#footer {
+    width:100%; padding: 30px; 
+    text-align: center; 
+    background: #01204E; 
+    color: white;
+    box-sizing: border-box; 
+}
+#newyorktitle {
+    max-width: 100%;
+    background-image: url("./images/newyorktitle.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 200px 70px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 4em;
+}
+#brooklyntitle {
+    max-width: 100%;
+    background-image: url("./images/brooklyntitle.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 200px 70px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 4em;
+}
+#bronxtitle {
+    max-width: 100%;
+    background-image: url("./images/bronxtitle.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 200px 70px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 4em;
+}
+#manhattantitle {
+    max-width: 100%;
+    background-image: url("./images/manhattantitle.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 200px 70px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 4em;
+}
+#queenstitle {
+    max-width: 100%;
+    background-image: url("./images/queenstitle.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 200px 70px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 4em;
+}
+#statenislandtitle {
+    max-width: 100%;
+    background-image: url("./images/statenislandtitle.jpg"); 
+    background-size: cover; 
+    background-position: center;
+    padding: 200px 70px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 4em;
+}
+#arch {
+    width:100%; 
+    padding: 60px 30px 0px 30px; 
+    text-align: center;
+    color: #01204E;
+    box-sizing: border-box; 
+}
+#history {
+    box-sizing: border-box;
+    width:100%; 
+    padding: 50px 200px 80px 200px;
+    background-color: #f85525;
+    color: white;
+}
+#funfact {
+    box-sizing: border-box;
+    width:100%; 
+    padding: 50px 200px 80px 200px;
+    background-color: #f85525;
+    color: white;
+}
+#apioutput {
+    width:100%; 
+    padding: 60px 30px 10px 30px; 
+    text-align: center;
+    background-color: #028391;
+    color: white;
+}
+#resources {
+    width:100%; 
+    padding: 50px 200px 80px 200px;
+    box-sizing: border-box; 
+    text-align: center;
+}
+.margin {
+    float: left;
+    width: 9.5%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.spacing {
+    padding: 60px;
+}
+.threecolumn {
+    float: left;
+    width: 27%;
+    padding: 30px 30px 90px 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.twocolumn {
+    float: left;
+    text-align: center;
+    width: 40.5%;
+    box-sizing: border-box;
+    padding: 0px 60px;
+}
+.twocolumn img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.row {
+    overflow: auto;
+    padding: 30px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.darkblue {
+    color:#01204E;
+}
+.lightblue {
+    color:#028391;
+}
+.darkorange {
+    color:#f85525;
+}
+.lightorange {
+    color:#faa968;
+}
+.image-class {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.image-class:hover {
+  opacity: 0.5;
+}
