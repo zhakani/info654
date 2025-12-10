@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Emily Bradley, Samantha Racine, Zahra Hakani, Gaby Garcia, Rose Reilly">
+    <meta name="keywords" content="HTML, architecture, education">
+    <meta name="description" content="An educational webiste about NYC history and architecture">
+
+    <title>iloveNYC</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script>
+        async function onClickSubmitBpmansion() {
+            var location = document.getElementById("apiresultsBpmansion").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=2097423&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+             document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitGmlibrary() {
+            var location = document.getElementById("apiresultsGmlibrary").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=2100243&app_token=TW3gJ1FCRtb98K71sJDnxoplT` 
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitFordhamchapel() {
+            var location = document.getElementById("apiresultsFordhamchapel").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=2102051&app_token=TW3gJ1FCRtb98K71sJDnxoplT` 
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="header">
+        <h1>iloveNYC</h1>
+        <h4>An Educational Website for NYC Architecture and History</h4>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+            <li><a href="statenisland.html">Staten Island+</a></li>
+        </ul>
+    </div>
+
+    <div id="bronxtitle">
+        <h1>The Bronx</h1>
+    </div>
+
+    <div id="history">
+        <h2>More on the Borough</h2>
+
+        <p>The Bronx is home to 1.4 million people. If it were separated from New York and became its own city,it would
+            be the seventh largest city in the United States. The Bronx has the most green space out of all the
+            boroughs. The largest park in New York City is actually Pelham Bay Park, three times larger than Central
+            Park. The Bronx also has Van Corthlandt park, the New York Botanical Gardens, and the Bronx Zoo, the largest
+            Zoo in NYC. The Bronx is also one of the most diverse counties in the United States, with a significant
+            immigrant population. The name comes from Jonas Bronck, who owned a farm across from the river that
+            separated the Bronx from the island of Manhattan
+            (https://www.welcome2thebronx.com/2023/01/fun-facts-history-people-and-things-from-the-bronx-you-probably-didnt-know/#google_vignette).
+        </p>
+
+    </div>
+
+    <div id="arch">
+        <h2>Architecture</h2>
+        <p>Click each building name to learn more.</p>
+    </div>
+
+    <div class="row">
+        <div class="margin"></div>
+
+        <div class="threecolumn">
+            <img src="./images/bpmansion.jpg" alt="Image of Bronx Bartow-Pell Mansion" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitBpmansion()">
+                <h3>Bartow-Pell Mansion</h3>
+            </a>
+
+            <p>The land on which the mansion was built was initially inhabited by the Lenape. Thomas Pell signed a
+                treaty with the Lenape for 50,000 acres in 1654. Thomas Pell’s descendant, Robert Bartow and his wife
+                Maria Lorillard, completed the mansion in 1842. The mansion has a late Federal style exterior and Greek
+                Revival period rooms. The family lived there until 1888, when they sold the estate to the city so it
+                could become part of the future Pelham Bay Park
+                (https://www.bartowpellmansionmuseum.org/ about/history/).</p>
+        </div>
+
+        <div class="threecolumn">
+            <img src="./images/gmlibrary.jpg" alt="Image of Bronx Gould Memorial Library" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitGmlibrary()">
+                <h3>Gould Memorial Library</h3>
+            </a>
+
+            <p>Gould Memorial Library was designed by Stanford White, who also designed the arch in Washington Square
+                Park and the second Madison Square Garden. The library was originally built for New York University’s
+                campus in the Bronx. The library was designed after the Pantheon in Rome. It is a circular building with
+                a domed roof lined with 16 Corinthian columns. The dome also has an oculus at the center. There are
+                statues of the Greek Muses, and the floor has Italian marble mosaic tile
+                (https://www.bcc.cuny.edu/about-bcc/history-architecture/gould-memorial-library/).</p>
+        </div>
+
+        <div class="threecolumn">
+            <img src="./images/fordhamchapel.jpg" alt="Image of Bronx Fordham Chapel" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitFordhamchapel()">
+                <h3>Fordham University Chapel</h3>
+            </a>
+
+            <p>The Fordham University Church was built in 1845 in a Gothic Revival style inspired by many European
+                Gothic cathedrals. The church was originally built for the surrounding farm community and as a seminary
+                chapel. The Jesuits would purchase the church in 1859, and it would later become part of the Fordham
+                campus. The church contains an altar from St. Patrick’s Cathedral
+                (https://sourcebooks.fordham.edu/medny/ venturi.asp).</p>
+        </div>
+
+        <div class="margin"></div>
+    </div>
+
+    <div id="apioutput">
+        <h2>Learn More</h2>
+        <p>Click each building name to learn more.</p>
+
+        <div id="apiresultsBpmansion">
+            Borough: <span id="Borough"></span> <br>
+            Address: <span id="Des_Addres"></span> <br>
+            Architect: <span id="Arch_Build"></span> <br>
+            Date: <span id="Date_Combo"></span> <br>
+            Style: <span id="Style_Prim"></span> <br>
+            Material:  <span id="Mat_Prim"></span> <br>
+        </div>
+        <div id="apiresultsGmlibrary">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+        </div>
+
+        <div id="apiresultsFordhamchapel">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+        </div>
+    </div>
+
+    <div id=funfact>
+        <h2>Did You Know?</h2>
+        <p>Fun Fact: The Bronx is the only borough in the city located on the mainland.</p>
+    </div>
+
+    <div id="resources">
+        <h2>Additional Resources</h2>
+            <p><a href="https://bronxhistoricalsociety.org/">The Bronx Historical Society</a></p>
+            <p><a href="https://datausa.io/profile/geo/bronx-county-ny">Bronx County Data USA</a></p>
+            <p><a href="https://www.bxtimes.com/">Bronx Times</a></p>
+            <p><a href="https://bronxnet.org/">BronxNet</a></p>
+    </div>
+
+    <div id="footer">
+        <h4>Image Citations</h4>
+        <h4>Bartow-Pell Mansion: By Dmadeo-Own Work, CC-BY-SA-3.0,2.5,2.0,1.0 (https://commons.wikimedia.org/wiki/File:Bartow-pell-mansion.jpg)</h4>
+        <h4>Morris Heights (Bronx): Assumed own work, no author found (https://commons.wikimedia.org/wiki/File:Morrisheightsbx.JPG)</h4>
+        <h4>Bronx Community College Library Exterior: By Fatih Ergun-Own Work, CC-BY-SA-4.0 (https://commons.wikimedia.org/wiki/File:Bronx_Community_College_Library_exterior_-2_(cropped).jpg)</h4>
+        <h4>Fordham University Church: By Raymond Bucko-Own Work, CC-BY-2.0 (https://commons.wikimedia.org/wiki/File:Fordham_University_Church_by_R._Bucko.jpg)</h4>
+        <h4>Header Image: Google. (n.d.). [Map of The Bronx, New York, NY] [Screenshot of map]. Google Maps.https://www.google.com/maps/place/The+Bronx,+New+York,+NY</h4>
+
+        <h4> © iloveNYC Architecture. 2025. </h4>
+        <h4>Emily Bradley, Gaby Garcia, Zahra Hakani, Samantha Racine, Rose Reilly</h4>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Emily Bradley, Samantha Racine, Zahra Hakani, Gaby Garcia, Rose Reilly">
+    <meta name="keywords" content="HTML, architecture, education">
+    <meta name="description" content="An educational webiste about NYC history and architecture">
+
+    <title>iloveNYC</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script>
+        async function onClickSubmitBlockhouse() {
+            var location = document.getElementById("apiresultsBlockhouse").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=1086381&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitImmigration() {
+            var location = document.getElementById("apiresultsImmigration").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=1085964&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitHospital() {
+            var location = document.getElementById("apiresultsHospital").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=1090045&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitRangelighthouse() {
+            var location = document.getElementById("apiresultsRangelighthouse").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=5037281&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        } 
+    </script>
+
+</head>
+
+<body>
+    <div id="header">
+        <h1>iloveNYC</h1>
+        <h4>An Educational Website for NYC Architecture and History</h4>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+            <li><a href="statenisland.html">Staten Island+</a></li>
+        </ul>
+    </div>
+
+    <div id="statenislandtitle">
+        <h1>Staten Island+</h1>
+    </div>
+
+    <div id="history">
+        <h2>More on the Borough</h2>
+
+        <p>Staten Island is located at the very southern tip of New York State.</p>
+        <p>Staten Island has several nicknames. One is "The Forgotten Borough." This name was used almost 100 years ago.
+            It became more popular during the 1990s when people wanted Staten Island to separate from New York City. It
+            was also used after Hurricane Sandy.</p>
+        <p>Another nickname is "the borough of parks." This is because of its many protected parklands and green spaces.
+            The island has 12,300 acres of parkland and over 170 parks.</p>
+        <p>The Staten Island Zoo is also on the island. It opened in 1936. It was the first zoo in the U.S. focused on
+            education. In the 1960s, it had the world's largest collection of
+            rattlesnakes.(https://kids.kiddle.co/Staten_Island).</p>
+        <p>The National Lighthouse Museum on Staten Island is a reminder of how lighthouses played an important role in
+            the security and well being of New York and the United States. The museum is located in one of the buildings
+            of the former lighthouse depot complex that dates back to 1862. The organization offers special events,
+            lectures and occasional boat tours to nearby lighthouses.
+            (https://nylandmarks.org/explore-ny/national-lighthouse-museum/).</p>
+    </div>
+
+    <div id="arch">
+        <h2>Architecture</h2>
+        <p>Click each building name to learn more.</p>
+    </div>
+
+    <div class="row">
+        <div class="margin"></div>
+
+        <div class="twocolumn">
+            <img src="./images/blockhouse.jpg" alt="Image of Block House on Governor's Island" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitBlockhouse()">
+                <h3>The Block House</h3>
+            </a>
+
+            <p>Over the years, it served various military functions, including a General's headquarters, officers'
+                quarters, and hospital. It was also briefly used as a military prison, which is where it earned its
+                "Block House" name.</p>
+            <p>It is home to the island's only public library, which features publications and periodicals on art,
+                architecture, and urban planning.</p>
+            <p>In 2021, the Institute for Public Architecture made the Block House its permanent home, restoring two of
+                the three stories for its programs. The building supports residencies for architects and artists and
+                serves as a venue for work-in-progress exhibitions, workshops, and lectures.</p>
+            <p>Reference: https://instituteforpublicarchitecture.org/About </p>
+
+        </div>
+
+        <div class="twocolumn">
+            <img src="./images/mainimmigration.jpg" alt="Image of Main Immigration Building on Ellis Island"
+                style="width:100%;">
+            <a href="#/" onclick="onClickSubmitImmigration()">
+                <h3>Ellis Island National Museum of Immigration</h3>
+            </a>
+
+            <p>The Ellis Island National Museum of Immigration opened in 1990. It tells the story of American
+                immigration. The museum has exhibits across three floors of the main building. You can see the baggage
+                room, the famous registry room, and old dormitory rooms. There are also theaters for films and
+                performances.</p>
+            <p>In 2001, the American Family Immigration History Center opened. It helps people research their family's
+                immigration history. In 2015, the museum was renamed the Ellis Island National Museum of Immigration.
+                This was to show that it covers the entire story of immigration to America, not just the years Ellis
+                Island was open.</p>
+            <p>Reference: https://kids.kiddle.co/Ellis_Island</p>
+
+        </div>
+
+        <div class="margin"></div>
+    </div>
+
+    <div class="row">
+        <div class="margin"></div>
+
+        <div class="twocolumn">
+            <img src="./images/hospital.jpg" alt="Image of Renwick Smallpox Hospital" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitHospital()">
+                <h3>Renwick Smallpox Hospital</h3>
+            </a>
+
+            <p>This hospital was designed by a well-known architect named James Renwick Jr.. It opened in 1856 and could
+                hold 100 patients. </p>
+            <p>About 100 years after it opened, the hospital closed down. The building slowly fell apart and became a
+                ruin. In 1972, it was added to the National Register of Historic Places. Four years later, it became a
+                New York City Landmark. It is the only ruin in the city with this special landmark status.</p>
+            <p>Even though the building looks like a castle, which is called Gothic Revival style, the windows on the
+                third floor have pointed tops instead of curved ones. This was a bit unusual for that style.</p>
+            <p>Reference: https://kids.kiddle.co/Smallpox_Hospital </p>
+
+        </div>
+
+        <div class="twocolumn">
+            <img src="./images/rangelighthouse.jpg" alt="Image of Range Light House" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitRangelighthouse()">
+                <h3>Staten Island Range Lighthouse</h3>
+            </a>
+
+            <p>A 90-foot octagonal tower made of brick, stone, and iron, with a rusticated limestone base.
+                Shows a fixed white light visible for 18 miles. It was upgraded in 1939 with a 1,000-watt bulb and a
+                Fresnel range lamp. Completed in 1912 and designated a National Historic Landmark in 1968
+                (https://www.lighthousefriends.com/index.html).</p>
+        </div>
+
+        <div class="margin"></div>
+    </div>
+
+    <div class="spacing"></div>
+
+    <div id="apioutput">
+        <h2>Learn More</h2>
+        <p>Click each building name to learn more.</p>
+
+        <div id="apiresultsBlockhouse">
+            Borough: <span id="Borough"></span> <br>
+            Address: <span id="Des_Addres"></span> <br>
+            Architect: <span id="Arch_Build"></span> <br>
+            Date: <span id="Date_Combo"></span> <br>
+            Style: <span id="Style_Prim"></span> <br>
+            Material: <span id="Mat_Prim"></span> <br>
+        </div>
+
+        <div id="apiresultsImmigration">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+            
+        </div>
+
+        <div id="apiresultsHospital">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+        </div>
+
+        <div id="apiresultsRangelighthouse">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+        </div>
+
+    </div>
+
+    <div id=funfact>
+        <h2>Did You Know?</h2>
+        <p>Fun Fact:
+            Staten Island is the only borough not connected to the New York City Subway system.
+            (Reference: https://kids.kiddle.co/Staten_Island)</p>
+    </div>
+
+    <div id="resources">
+        <h2>Additional Resources</h2>
+        <p> Staten Island</p>
+        <p>
+            <a href="https://www.nypl.org/locations">NYPL Finder</a>
+            <a href="https://www.statenislandmuseum.org/education/">Staten Island Museum</a>
+        </p>
+        <p>Governors Island</p>
+        <p>
+            <a href="https://www.grownyc.org/teaching-garden ">GrowNYC Teaching Garden at Governors Island</a>
+            <a href="https://www.nps.gov/gois/learn/kidsyouth/index.htm">Junior Park Ranger Badge</a>
+        </p>
+        <p> Ellis Island</p>
+        <p>
+            <a href="https://www.nps.gov/elis/learn/historyculture/the-research-library.htm">The Research Library</a>
+        </p>
+        <p> Roosevelt Island</p>
+        <p>
+            <a href="https://alivinglibrary.org/archive-site/branches/roosevelt-island">Living Library & Think Park</a>
+            <a href="https://www.bike.nyc/education/programs/">Bike New York</a>
+        </p>
+    </div>
+
+    <div id="footer">
+        <h4>Image Citations</h4>
+        <h4>The Block House (Governor’s Island): By Dmadeo - Own work, CC BY-SA 3.0,
+            (https://commons.wikimedia.org/w/index.php?curid=4625675)</h4>
+        <h4>Renwick Smallpox Hospital (Roosevelt Island): By MusikAnimal - Own work, CC BY-SA 4.0,
+            (https://commons.wikimedia.org/w/index.php?curid=36597651)</h4>
+        <h4>Ellis Island National Museum of Immigration: By Dmckelvey4 - Own work, CC BY-SA 4.0,
+            (https://commons.wikimedia.org/w/index.php?curid=73065029)</h4>
+        <h4>Staten Island Range Lighthouse: By Jim.henderson - Own work, CC BY-SA 4.0,
+            (https://commons.wikimedia.org/w/index.php?curid=70131193)</h4>
+        <h4>Header Image: Google. (n.d.). [Map of Staten Island, New York, NY] [Screenshot of map]. Google Maps.https://www.google.com/maps/place/Staten+Island,+New+York,+NY</h4>
+        <h4> © iloveNYC Architecture. 2025. </h4>
+        <h4>Emily Bradley, Gaby Garcia, Zahra Hakani, Samantha Racine, Rose Reilly</h4>
+    </div>
+</body>
+
+</html>

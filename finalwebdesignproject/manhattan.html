@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Emily Bradley, Samantha Racine, Zahra Hakani, Gaby Garcia, Rose Reilly">
+    <meta name="keywords" content="HTML, architecture, education">
+    <meta name="description" content="An educational webiste about NYC history and architecture">
+
+    <title>iloveNYC</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script>
+    async function onClickSubmitChrysler(){
+      var location = document.getElementById("apiresultsChrysler").value;
+      var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=1036156&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+      var response = await fetch(url);
+      var jsonData = await response.json();
+
+      document.getElementById("Borough").innerText = jsonData[0].borough; 
+      document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+      document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+      document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+      document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+      document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+    }
+
+        async function onClickSubmitEmpire(){
+      var location = document.getElementById("apiresultsEmpire").value;
+      var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=1015862&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+      var response = await fetch(url);
+      var jsonData = await response.json();
+
+      document.getElementById("Borough").innerText = jsonData[0].borough; 
+      document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+      document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+      document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+      document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+      document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+    }
+
+            async function onClickSubmitGrandcentral(){
+      var location = document.getElementById("apiresultsGrandcentral").value;
+      var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=1035381&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+      var response = await fetch(url);
+      var jsonData = await response.json();
+
+      document.getElementById("Borough").innerText = jsonData[0].borough; 
+      document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+      document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+      document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+      document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+      document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+    }
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <h1>iloveNYC</h1>
+        <h4>An Educational Website for NYC Architecture and History</h4>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+            <li><a href="statenisland.html">Staten Island+</a></li>
+        </ul>
+    </div>
+
+    <div id="manhattantitle">
+        <h1>Manhattan</h1>
+    </div>
+
+    <div id="history">
+        <h2>More on the Borough</h2>
+
+        <p>The borough of Manhattan was Lenape land that eventually evolved into one of the most famous and storied
+            metropolises in the world, ushering in early waves of colonization, immigration, and commerce that molded
+            its future. Manhattan’s central geographic placement on the Atlantic coast made it invaluable as a massive
+            harbor and hub for trade, helping to secure the borough’s relationship to economic power (https://www.britannica.com/place/Manhattan-New-York-City).</p>
+
+        <p>From row houses to Art Deco to Gilded Age mansions to iconic skyscrapers, Manhattan architecture reflects
+            vast commerce, complexity, and historical roots. Architectural artifacts of New York’s colonial period
+            include chapels and taverns, which eventually gave way to Greek Revival and Beaux-Arts. Later, with further
+            financial and population growth, commercial architecture exploded in the Midtown and Financial Districts,
+            while Harlem churned out poetry, music, and art that contributed greatly to Manhattan’s cultural landscape
+            and worldwide influence. Now known as one of the most expensive places to live in America, neighborhoods
+            across Manhattan contain both preserved history and modern elements that reflect a diverse urban footprint.
+            Despite rampant gentrification, longstanding communities still persist, their history is still visible (https://architecture-history.org/schools/NEW%20YORK,%20USA.html).</p>
+
+        <p>Manhattan is the home to one of the most famous skylines in the world, including massive structures such as
+            the Freedom Tower (built in the wake of the 9/11 attacks), Empire State Building, Flatiron Building, and
+            Chrysler Building, along with the core transportation centers of New York Penn Station and Grand Central
+            Terminal.</p>
+    </div>
+
+    <div id="arch">
+        <h2>Architecture</h2>
+        <p>Click each building name to learn more.</p>
+    </div>
+
+    <div class="row">
+        <div class="margin"></div>
+
+        <div class="threecolumn">
+            <img src="./images/chrysler.jpg" alt="Image of Chrysler Building" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitChrysler()"><h3>Chrysler Building</h3></a>
+
+            <p>The Chrysler Building is a famous Art Deco skyscraper built in 1930 and designed by William Van Alen. Its
+                height and glamor makes it a fixture of Manhattan architecture (https://skyscraper.org/tallest-towers/chrysler-building/).</p>
+
+        </div>
+
+        <div class="threecolumn">
+            <img src="./images/empirestate.jpg" alt="Image of Empire State Building" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitEmpire()"><h3>Empire State Building</h3></a>
+
+            <p>The Empire State Building is a symbolic powerhouse of New York City, completed in 1931 and designed by
+                the architectural firm Shreve, Lamb & Harmon in the Art Deco style. It was the world’s tallest building
+                up until 1970, when the World Trade Center was built (https://www.architecturaldigest.com/story/the-empire-state-building-everything-you-need-to-know).</p>
+
+        </div>
+
+        <div class="threecolumn">
+            <img src="./images/grandcentral.jpg" alt="Image of Grand Central Terminal" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitGrandcentral()"><h3>Grand Central Station</h3></a>
+            <p>Grand Central Terminal is a train station built in the Beaux-Arts architectural style by firms Reed &
+                Stem, and Warren & Wetmore. Grand Central is known for its ceiling constellation mural and marble
+                staircases, which make it a beloved New York City attraction in addition to a huge commuter rail (https://blog.mcny.org).</p>
+
+        </div>
+
+        <div class="margin"></div>
+    </div>
+
+    <div id="apioutput">
+        <h2>Learn More</h2>
+            <p>Click each building name to learn more.</p>
+            <div id="apiresultsChrysler">
+                Borough: <span id="Borough"></span> <br>
+                Address: <span id="Des_Addres"></span> <br>
+                Architect: <span id="Arch_Build"></span> <br>
+                Date: <span id="Date_Combo"></span> <br>
+                Style: <span id="Style_Prim"></span> <br>
+                Material: <span id="Mat_Prim"></span> <br>
+                </div>
+            
+            <div id="apiresultsEmpire">
+                <span id="Borough"></span> <br>
+                <span id="Des_Addres"></span> <br>
+                <span id="Arch_Build"></span> <br>
+                <span id="Date_Combo"></span> <br>
+                <span id="Style_Prim"></span> <br>
+                <span id="Mat_Prim"></span> <br>
+                </div>
+            
+            <div id="apiresultsGrandcentral">
+                <span id="Borough"></span> <br>
+                <span id="Des_Addres"></span> <br>
+                <span id="Arch_Build"></span> <br>
+                <span id="Date_Combo"></span> <br>
+                <span id="Style_Prim"></span> <br>
+                <span id="Mat_Prim"></span> <br>
+                </div>
+            
+    </div>
+
+    <div id=funfact>
+        <h2>Did You Know?</h2>
+        <p>Fun Fact:
+            Fifth Avenue stretches a little over 6 miles from Washington Square Park in Greenwich Village all the way up
+            to 143rd Street in Harlem.
+        </p>
+    </div>
+
+    <div id="resources">
+        <h2>Additional Resources</h2>
+        <p><a href="https://www.nypl.org/locations">NYPL Location Finder</a></p>
+        <p><a href="https://www.centralparknyc.org/locations">Guide to Central Park</a></p>
+        <p><a href="https://www.centerforarchitecture.org/tours/walking-tours/">Center for Architecture Walking
+                Tours</a></p>
+        <p><a href="https://www.oldnyc.org/">Old NYC</a></p>
+        <p><a href="https://www.columbia.edu/cu/iraas/harlem/index.html">Harlem History</a></p>
+    </div>
+
+    <div id="footer">
+        <h4>Image Citations</h4>
+        <h4>Chrysler Building: Irma and Paul Milstein Division of United States History, Local History and Genealogy. (1930). Lexington Avenue – East 43rd Street [Photograph]. The New York Public Library. https://digitalcollections.nypl.org/items/3c7893f0-c5ed-012f-7347-58d385a7bc34.</h4>
+        <h4>Grand Central Terminal: Abrams, S. (2016). Grand Central Terminal, New York, United States [Photograph]. Unsplash. https://unsplash.com/photos/66RpGmX4ef4</h4>
+        <h4>Empire State Building: Irma and Paul Milstein Division of United States History, Local History and Genealogy. (1954). Manhattan: Elevated and Empire State Building [Photograph]. The New York Public Library. https://digitalcollections.nypl.org/items/eba88450-6a16-0133-64ab-00505686a51c</h4>
+        <h4>Header Image: Google. (n.d.). [Map of Manhattan, New York, NY] [Screenshot of map]. Google Maps.https://www.google.com/maps/place/Manhattan,+New+York,+NY</h4>
+        
+        <h4> © iloveNYC Architecture. 2025. </h4>
+        <h4>Emily Bradley, Gaby Garcia, Zahra Hakani, Samantha Racine, Rose Reilly</h4>
+    </div>
+</body>
+
+</html>

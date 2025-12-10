@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Emily Bradley, Samantha Racine, Zahra Hakani, Gaby Garcia, Rose Reilly">
+    <meta name="keywords" content="HTML, architecture, education">
+    <meta name="description" content="An educational webiste about NYC history and architecture">
+
+    <title>iloveNYC</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script>
+        async function onClickSubmitGreenwood() {
+            var location = document.getElementById("apiresultsGreenwood").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=3395901&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitBam() {
+            var location = document.getElementById("apiresultsBam").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=3059185&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitPfizer() {
+            var location = document.getElementById("apiresultsPfizer").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=3055051&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="header">
+        <h1>iloveNYC</h1>
+        <h4>An Educational Website for NYC Architecture and History</h4>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+            <li><a href="statenisland.html">Staten Island+</a></li>
+        </ul>
+    </div>
+
+    <div id="brooklyntitle">
+        <h1>Brooklyn</h1>
+    </div>
+
+    <div id="history">
+        <h2>More on the Borough</h2>
+
+        <p>The borough of Brooklyn is packed with a rich variety of architectural styles, including brownstones,
+            industrial lofts, mid-century towers, and contemporary designs. Many well-known Brooklyn neighborhoods
+            cropped up as hubs of industrialization, while others became enclaves for specific immigrant populations and
+            ethnic groups whose culture shaped Brooklyn into what it is today. Gentrification began spreading to
+            different areas of Brooklyn in the 1960’s and 70’s– affecting neighborhoods such as Park Slope—and continued
+            as the borough was viewed less as a mere suburb of Manhattan and became a desirable place to live in its own
+            right (https://www.britannica.com/place/Brooklyn-borough-New-York-City).</p>
+
+        <p>Landmarks across Brooklyn are vast, from the famous Coney Island Boardwalk to the Brooklyn Bridge, which
+            opened in May 1883, connecting the boroughs of Brooklyn and Manhattan over the East River
+            (https://archaeology.cityofnewyork.us/collection/nyc-timeline/brooklyn-bridge-opens).</p>
+
+        <p>The more transportation options that became available, the more cultural movement occurred between the
+            boroughs, with new populations discovering and ultimately helping to build Brooklyn (New York Transit
+            Museum). Architecturally, neighborhoods such as Clinton Hill, Carroll Gardens, Fort Greene, Brooklyn
+            Heights, and Bedford-Stuyvesant are known for their endless rows of brownstones, and each neighborhood is
+            preserved in its own right as a historic district and New York City landmark, along with many others
+            (https://www.bklynlibrary.org/blog/2010/10/22/brooklyn-architecture-and).</p>
+    </div>
+
+    <div id="arch">
+        <h2>Architecture</h2>
+        <p>Click each building name to learn more.</p>
+    </div>
+
+    <div class="row">
+        <div class="margin"></div>
+
+        <div class="threecolumn">
+            <img src="./images/greenwood.jpg" alt="Image of Greenwood Cemetary" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitGreenwood()">
+                <h3>Green-wood Cemetary Gates</h3>
+            </a>
+            <p>The Green-wood Cemetery Gates were designed in 1838 by Richard Upjohn as an extravagant showcase of
+                Gothic Revival architecture, serving as the main entrance to the historic Green-wood Cemetery, which is
+                a beloved Brooklyn landmark and is considered the first public park of the borough
+                (https://s-media.nyc.gov/agencies/lpc/lp/0149.pdf). </p>
+        </div>
+
+        <div class="threecolumn">
+            <img src="./images/bam.jpg" alt="Image of Brooklyn Academy of Music" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitBam()">
+                <h3>Brooklyn Academy of Music</h3>
+            </a>
+
+            <p>The Peter Jay Sharp Building was built in 1908 and designed by Herts & Tallant, a New York architectural
+                firm responsible for dreaming up some of the grandest theatres across the five boroughs using elements
+                of the Italian Renaissance Revival style. Today, the Peter Jay Sharp Building is home to the Brooklyn
+                Academy of Music and is a fixture of Brooklyn artistic expression
+                (https://www.bam.org/about/history/bam-hamm-archives/bam-buildings).</p>
+        </div>
+
+        <div class="threecolumn">
+            <img src="./images/pfizermansion.jpg" alt="Image of Pfizer Mansion" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitPfizer()">
+                <h3>Pfizer Mansion</h3>
+            </a>
+            <p>The Pfizer Mansion is a Queen Ann-style mansion built in 1887 by the co-founder of the Pfizer
+                pharmaceutical company. It cycled through many lives since then, with spells as a public library,
+                Catholic school for girls, and home to a rock musician. It is currently on the market for 9.375 million
+                (https://www.brownstoner.com/real-estate-market/clinton-hill-pfizer-mansion-280-washington-avenue-elevator/).
+            </p>
+        </div>
+
+        <div class="margin"></div>
+    </div>
+
+    <div id="apioutput">
+        <h2>Learn More</h2>
+        <p>Click each building name to learn more.</p>
+        <div id="apiresultsGreenwood">
+            Borough: <span id="Borough"></span> <br>
+            Address: <span id="Des_Addres"></span> <br>
+            Architect: <span id="Arch_Build"></span> <br>
+            Date: <span id="Date_Combo"></span> <br>
+            Style: <span id="Style_Prim"></span> <br>
+            Material: <span id="Mat_Prim"></span> <br>
+        </div>
+
+        <div id="apiresultsBam">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+        </div>
+
+        <div id="apiresultsPfizer">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+        </div>
+
+    </div>
+
+    <div id=funfact>
+        <h2>Did You Know?</h2>
+        <p>Fun Fact: Coney Island was home to one of the world’s first electric roller coasters called the “Flip Flap
+            Railway” in the 1890’s.</p>
+    </div>
+
+    <div id="resources">
+        <h2>Additional Resources</h2>
+        <p><a href="https://www.bklynlibrary.org/locations ">Brooklyn Public Library Branch locator</a></p>
+        <p><a href="https://www.nyc.gov/site/lpc/designations/historic-district-brooklyn.page">Historic District Maps
+                for Brooklyn</a></p>
+        <p><a href="https://www.nytransitmuseum.org/">New York Transit Museum</a></p>
+        <p><a href="https://www.bkmag.com/about/">Brooklyn Magazine</a></p>
+        <p><a href="https://www.prospectpark.org/">Prospect Park Alliance</a></p>
+        <p><a href="https://www.coneyisland.com/">Coney Island</a></p>
+    </div>
+
+    <div id="footer">
+        <h4>Image Citations</h4>
+        <h4>Green-wood Cemetery Gates: Beyond My Ken. (2015). Green-Wood Cemetery gate from inside [Photograph]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:2015_Green-Wood_Cemetery_Gate_from_inside.jpg.</h4>
+        <h4>Peter Jay Sharp Building (BAM): Suresh, A. (2019). Peter Jay Sharp Building (Brooklyn Academy of Music) [Photograph]. Wikimedia Commons. https://commons.wikimedia.org/wiki/File:Brooklyn_Academy_of_Music_(BAM)_(48228024996).jpg.</h4>
+        <h4>Pfizer Mansion Douglas Elliman. (2025). 280 Washington Ave [Photograph]. https://www.elliman.com/listing/280-washington-ave-brooklyn-ny-11205/17294161. Used under fair use for educational purposes.</h4>
+        <h4>Header Image: Google. (n.d.). [Map of Brooklyn, New York, NY] [Screenshot of map]. Google Maps.https://www.google.com/maps/place/Brooklyn,+New+York,+NY</h4>
+        <h4> © iloveNYC Architecture. 2025. </h4>
+        <h4>Emily Bradley, Gaby Garcia, Zahra Hakani, Samantha Racine, Rose Reilly</h4>
+    </div>
+</body>
+
+</html>

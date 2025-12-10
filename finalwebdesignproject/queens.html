@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authors" content="Emily Bradley, Samantha Racine, Zahra Hakani, Gaby Garcia, Rose Reilly">
+    <meta name="keywords" content="HTML, architecture, education">
+    <meta name="description" content="An educational webiste about NYC history and architecture">
+
+    <title>iloveNYC</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script>
+        async function onClickSubmitUnisphere() {
+            var location = document.getElementById("apiresultsUnisphere").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=3000000&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitBownehouse() {
+            var location = document.getElementById("apiresultsBownehouse").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=4113403&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+
+        async function onClickSubmitFlushingtownhall() {
+            var location = document.getElementById("apiresultsFlushingtownhall").value;
+            var url = `https://data.cityofnewyork.us/api/v3/views/gpmc-yuvp/query.json?query=SELECT%20*%20WHERE%20bin=4112147&app_token=TW3gJ1FCRtb98K71sJDnxoplT`
+            var response = await fetch(url);
+            var jsonData = await response.json();
+
+            document.getElementById("Borough").innerText = jsonData[0].borough;
+            document.getElementById("Des_Addres").innerText = jsonData[0].des_addres;
+            document.getElementById("Arch_Build").innerText = jsonData[0].arch_build;
+            document.getElementById("Date_Combo").innerText = jsonData[0].date_combo;
+            document.getElementById("Style_Prim").innerText = jsonData[0].style_prim;
+            document.getElementById("Mat_Prim").innerText = jsonData[0].mat_prim;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <h1>iloveNYC</h1>
+        <h4>An Educational Website for NYC Architecture and History</h4>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brooklyn.html">Brooklyn</a></li>
+            <li><a href="bronx.html">Bronx</a></li>
+            <li><a href="manhattan.html">Manhattan</a></li>
+            <li><a href="queens.html">Queens</a></li>
+            <li><a href="statenisland.html">Staten Island+</a></li>
+        </ul>
+    </div>
+
+    <div id="queenstitle">
+        <h1>Queens</h1>
+    </div>
+
+    <div id="history">
+        <h2>More on the Borough</h2>
+
+        <p>Queens is the largest borough in New York City by land mass and has the second largest population. Queens has
+            the nickname of the world’s borough, being the most ethnically and linguistically diverse place in the
+            world. Queens was originally the home of the Lenape people, along with other tribes on Long Island. The
+            Dutch colonized and settled New Amsterdam, now known as New York City, in 1625, starting with what would
+            later be known as Long Island City. In 1664, the Dutch surrendered Queens to the English. Queens would not
+            become part of New York City until 1898 (https://queenshistoricalsociety.org/queens-history-timeline/).</p>
+
+    </div>
+
+    <div id="arch">
+        <h2>Architecture</h2>
+        <p>Click each building name to learn more.</p>
+    </div>
+
+    <div class="row">
+        <div class="margin"></div>
+
+        <div class="threecolumn">
+            <img src="./images/unisphere.jpg" alt="Image of Unisphere" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitUnisphere()">
+                <h3>Unisphere</h3>
+            </a>
+            <p>This sculpture of the Earth is 140ft (43m). It is the focal point of Flushing Meadows-Corona Park. It was
+                built between 1963 to 1964 and was officially dedicated in March 1964. It was built for the 1964 New
+                York World’s Fair. Robert Moses, the head of the Parks Department, commissioned the architect Gilmore D.
+                Clarke to design the sculpture. The planet has three rings around it, representing the three satellites
+                that were launched into orbit. It has become an iconic symbol of Queens
+                (https://www.nycgovparks.org/parks/flushing-meadows-corona-park/highlights/12761).</p>
+        </div>
+
+        <div class="threecolumn">
+            <img src="./images/bownehouse.jpg" alt="Image of John Bowne House" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitBownehouse()">
+                <h3>John Bowne House</h3>
+            </a>
+
+            <p>The John Bowne House is the oldest home in Queens, originally built around 1661. It is the oldest
+                remaining example of Anglo-Dutch vernacular architecture in the United States. John Bowne was an
+                advocate for religious freedom, and his descendants would help facilitate the Underground Railroad. It
+                is a member of the National Park Service National Underground Railroad Network the Freedom, one of a few
+                in New York (https://www.bownehouse.org/history-of-the-house).</p>
+        </div>
+
+        <div class="threecolumn">
+            <img src="./images/flushingtownhall.jpg" alt="Image of Flushing Town Hall" style="width:100%;">
+            <a href="#/" onclick="onClickSubmitFlushingtownhall()">
+                <h3>Flushing Town Hall</h3>
+            </a>
+
+            <p>Flushing Town Hall's foundation and cornerstone were laid on June 7, 1882. The building was built with
+                brick in a Gothic style. It has been the heart of the Flushing community. Historically, holding town
+                halls, theater productions, and speeches. Frederick Douglass even delivered a speech there in 1865. The
+                town hall continues to host numerous cultural events that represent the rich cultural diversity of
+                Flushing, Queens (https://www.flushingtownhall.org/mission-and-history).</p>
+        </div>
+
+        <div class="margin"></div>
+    </div>
+
+    <div id="apioutput">
+        <h2>Learn More</h2>
+        <p>Click each building name to learn more.</p>
+
+        <div id="apiresultsUnisphere">
+            Borough: <span id="Borough"></span> <br>
+            Address: <span id="Des_Addres"></span> <br>
+            Architect: <span id="Arch_Build"></span> <br>
+            Date: <span id="Date_Combo"></span> <br>
+            Style: <span id="Style_Prim"></span> <br>
+            Material: <span id="Mat_Prim"></span> <br>
+        </div>
+
+        <div id="apiresultsBownehouse">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+        </div>
+
+        <div id="apiresultsFlushingtownhall">
+            <span id="Borough"></span> <br>
+            <span id="Des_Addres"></span> <br>
+            <span id="Arch_Build"></span> <br>
+            <span id="Date_Combo"></span> <br>
+            <span id="Style_Prim"></span> <br>
+            <span id="Mat_Prim"></span> <br>
+        </div>
+    </div>
+
+    <div id=funfact>
+        <h2>Did You Know?</h2>
+        <p>Fun Fact: If Queens became independent from New York City, it would be the fourth-largest city in America.</p>
+    </div>
+
+    <div id="resources">
+        <h2>Additional Resources</h2>
+            <p><a href="https://ny.curbed.com/2019/1/10/18172136/modern-architecture-queens-new-york">The Unsung Modernist Treasures of Queens</a></p>
+            <p><a href="https://qns.com/2023/02/queens-historical-sites-nyc-landmarks-conservancy-exhibition/">Six Queens Historical sites Featured in New York Landmarks Conservancy online Exhibition</a></p>
+            <p><a href="https://queenshistoricalsociety.org/">Queens Historical Society</a></p>
+            <p><a href="https://www.newyorkfamilyhistory.org/knowledgebase/queens-county-new-york-guide">New York Genealogical and Biographical Society</a></p>
+    </div>
+
+    <div id="footer">
+        <h4>Image Citations</h4>
+        <h4>Flushing Town Hall: By Jim Henderson-Own Work (https://commons.wikimedia.org/wiki/File:Flushing_Town_Hall_jeh.JPG#filelinks)</h4>
+        <h4>Moon above the Unisphere by the Queens Museum (Unisphere): By Karin Kim-Taken from Unsplash (https://unsplash.com/photos/a-large-metal-globe-with-a-sky-background-mtdPSw4cdUY)</h4>
+        <h4>Flushing Town Hall: By Jim Henderson-Own Work (https://commons.wikimedia.org/wiki/File:Flushing_Town_Hall_jeh.JPG#filelinks)</h4>
+        <h4>John Bowne House: By user Station1-Own Work, CC-BY-SA-4.0,3.0,2.5,2.0,1.0 (https://commons.wikimedia.org/wiki/File:Bowne_House_2018.JPG)</h4>
+        <h4>Header Image: Google. (n.d.). [Map of Queens, New York, NY] [Screenshot of map]. Google Maps.https://www.google.com/maps/place/Queens,+New+York,+NY</h4>
+        <h4> © iloveNYC Architecture. 2025. </h4>
+        <h4>Emily Bradley, Gaby Garcia, Zahra Hakani, Samantha Racine, Rose Reilly</h4>
+    </div>
+</body>
+
+</html>
